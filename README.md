@@ -1,4 +1,10 @@
-# algorithms
+# Algorithms
+
+In this repo I include algorithms and data structure implementations I use to study and review.
+
+This is practice I do while reading the book [Grokking Algorithms](https://www.manning.com/books/grokking-algorithms-second-edition?ar=false&lpse=B)
+
+## Getting Started
 
 To install dependencies:
 
