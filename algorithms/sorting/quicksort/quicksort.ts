@@ -22,10 +22,14 @@ export function quicksort(arr: number[]): number[] {
     return arr;
   }
 
-  const pivot = arr[0];
+  const pivotIdx = Math.floor(Math.random() * (arr.length - 1));
+  const pivot = arr[pivotIdx];
   const less = [];
   const more = [];
-  for (let i = 1; i < arr.length; i++) {
+  for (let i = 0; i < arr.length; i++) {
+    if (i === pivotIdx) {
+      continue;
+    }
     if (arr[i] > pivot) {
       more.push(arr[i]);
     } else {
