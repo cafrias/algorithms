@@ -1,3 +1,13 @@
+/**
+ * Best case scenario is O(n log n), in order to do that, the pivot
+ * needs to hit the center.
+ *
+ * Worst case scenario is O(n^2), this happens when the pivot is
+ * at the beginning or end (`less` or `more` are empty).
+ *
+ * You can get the best case consistently as long as you pick a random
+ * element as the pivot.
+ */
 export function quicksort(arr: number[]): number[] {
   if (arr.length < 2) {
     return arr;
