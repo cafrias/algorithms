@@ -5,18 +5,20 @@ describe("Quicksort", () => {
   test("big array", () => {
     const input = [8, 11, 4, 5, 0, 0, 2, 3];
 
-    const res = quicksort(input);
+    quicksort(input);
 
-    expect(res).toEqual([0, 0, 2, 3, 4, 5, 8, 11]);
+    expect(input).toEqual([0, 0, 2, 3, 4, 5, 8, 11]);
   });
 
   test("empty array", () => {
-    const res = quicksort([]);
-    expect(res).toEqual([]);
+    const input: number[] = [];
+    quicksort(input);
+    expect(input).toEqual([]);
   });
 
   test("single element", () => {
-    const res = quicksort([6]);
-    expect(res).toEqual([6]);
+    const input = [6];
+    quicksort([6]);
+    expect(input).toEqual([6]);
   });
 });
