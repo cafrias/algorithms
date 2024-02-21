@@ -5,7 +5,8 @@ export function bestTimeStock(prices: number[]): number {
 
   while (r < prices.length) {
     if (prices[r] < prices[l]) {
-      l++;
+      l = r;
+      r = l + 1;
     } else {
       max = Math.max(max, prices[r] - prices[l]);
     }
