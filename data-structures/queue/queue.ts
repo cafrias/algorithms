@@ -34,6 +34,10 @@ export class Queue<T> {
     node.prev = undefined;
     this.length--;
 
+    if (this.length === 0) {
+      this.first = undefined;
+    }
+
     return node.value;
   }
 
