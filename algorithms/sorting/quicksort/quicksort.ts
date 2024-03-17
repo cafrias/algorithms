@@ -1,20 +1,23 @@
 function partition(arr: number[], l: number, h: number): number {
   const pivot = arr[h];
-  let i = l - 1;
-  for (let j = l; j < h; j++) {
-    if (arr[j] <= pivot) {
-      i++;
-      const a = arr[j];
-      arr[j] = arr[i];
-      arr[i] = a;
+  let pivotIdx = l - 1;
+
+  // Move all values less than pivot to the left
+  for (let i = l; i < h; i++) {
+    if (arr[i] <= pivot) {
+      pivotIdx++;
+      const a = arr[i];
+      arr[i] = arr[pivotIdx];
+      arr[pivotIdx] = a;
     }
   }
 
-  i++;
-  arr[h] = arr[i];
-  arr[i] = pivot;
+  // Move pivot to corresponding position
+  pivotIdx++;
+  arr[h] = arr[pivotIdx];
+  arr[pivotIdx] = pivot;
 
-  return i;
+  return pivotIdx;
 }
 
 function qs(arr: number[], l: number, h: number) {
